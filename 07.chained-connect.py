@@ -1,15 +1,25 @@
 import random
-from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton
+from PyQt6.QtWidgets import QApplication
+from PyQt6.QtWidgets import QMainWindow
+from PyQt6.QtWidgets import QPushButton
 from PyQt6.QtCore import QSize
 
 
-TITLES = ["pizda", "gopa", "idi nahuy", "zaebal", "pidor", "sosi", "poka"]
+TITLES = [
+    "pizda",
+    "gopa",
+    "idi nahuy",
+    "zaebal",
+    "pidor",
+    "sosi",
+    "poka"
+]
 
 
-class MemorizingApp(QMainWindow):
+class MainWindow(QMainWindow):
 
     def __init__(self):
-        super(MemorizingApp, self).__init__()
+        super().__init__()
 
         self.setWindowTitle("Gopa")
         self.windowTitleChanged.connect(self.title_changed)
@@ -31,8 +41,6 @@ class MemorizingApp(QMainWindow):
 
 
 app = QApplication([])
-
-window = MemorizingApp()
+window = MainWindow()
 window.show()
-
 app.exec()

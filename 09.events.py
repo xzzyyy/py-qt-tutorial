@@ -1,7 +1,9 @@
-from PyQt6.QtWidgets import QApplication, QMainWindow, QLabel
+from PyQt6.QtWidgets import QApplication
+from PyQt6.QtWidgets import QMainWindow
+from PyQt6.QtWidgets import QLabel
 
 
-class MemorizingApp(QMainWindow):
+class MainWindow(QMainWindow):
 
     def __init__(self):
         super().__init__()
@@ -28,8 +30,6 @@ class MemorizingApp(QMainWindow):
 
 
 app = QApplication([])
-
-window = MemorizingApp()
+window = MainWindow()
 window.show()
-
 app.exec()

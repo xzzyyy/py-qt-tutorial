@@ -9,7 +9,7 @@ from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QAction
 
 
-class ContextMenusWindow(QMainWindow):
+class MainWindow(QMainWindow):
 
     def __init__(self):
 
@@ -115,8 +115,6 @@ class ContextMenusWindow(QMainWindow):
 
 
 app = QApplication([])
-
-window = ContextMenusWindow()
+window = MainWindow()
 window.show()
-
 app.exec()

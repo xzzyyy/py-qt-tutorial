@@ -1,9 +1,14 @@
-from PyQt6.QtWidgets import QApplication, QMainWindow, QLabel, QMenu, QVBoxLayout, QWidget
+from PyQt6.QtWidgets import QApplication
+from PyQt6.QtWidgets import QMainWindow
+from PyQt6.QtWidgets import QLabel
+from PyQt6.QtWidgets import QMenu
+from PyQt6.QtWidgets import QVBoxLayout
+from PyQt6.QtWidgets import QWidget
 from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QAction
 
 
-class ContextMenusWindow(QMainWindow):
+class MainWindow(QMainWindow):
 
     def __init__(self):
         super().__init__()
@@ -81,8 +86,6 @@ class ContextMenusWindow(QMainWindow):
 
 
 app = QApplication([])
-
-window = ContextMenusWindow()
+window = MainWindow()
 window.show()
-
 app.exec()

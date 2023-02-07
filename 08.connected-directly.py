@@ -1,10 +1,15 @@
-from PyQt6.QtWidgets import QApplication, QMainWindow, QLabel, QLineEdit, QVBoxLayout, QWidget
+from PyQt6.QtWidgets import QApplication
+from PyQt6.QtWidgets import QMainWindow
+from PyQt6.QtWidgets import QLabel
+from PyQt6.QtWidgets import QLineEdit
+from PyQt6.QtWidgets import QVBoxLayout
+from PyQt6.QtWidgets import QWidget
 
 
-class MemorizingApp(QMainWindow):
+class MainWindow(QMainWindow):
 
     def __init__(self):
-        super(MemorizingApp, self).__init__()
+        super().__init__()
 
         self.label = QLabel()
         self.input = QLineEdit()
@@ -22,8 +27,6 @@ class MemorizingApp(QMainWindow):
 
 
 app = QApplication([])
-
-window = MemorizingApp()
+window = MainWindow()
 window.show()
-
 app.exec()

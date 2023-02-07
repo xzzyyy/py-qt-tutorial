@@ -1,11 +1,14 @@
-from PyQt6.QtWidgets import QApplication, QMainWindow, QLabel
-from PyQt6.QtCore import Qt, QSize
+from PyQt6.QtWidgets import QApplication
+from PyQt6.QtWidgets import QMainWindow
+from PyQt6.QtWidgets import QLabel
+from PyQt6.QtCore import Qt
+from PyQt6.QtCore import QSize
 
 
-class MemorizingApp(QMainWindow):
+class MainWindow(QMainWindow):
 
     def __init__(self):
-        super(MemorizingApp, self).__init__()
+        super().__init__()
 
         self.setWindowTitle("Gopa")
         label = QLabel("Idi nahuy!")
@@ -17,7 +20,7 @@ class MemorizingApp(QMainWindow):
 
 app = QApplication([])
 
-window = MemorizingApp()
+window = MainWindow()
 window.show()
 
 app.exec()
